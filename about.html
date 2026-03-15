@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Afsan Dental Care - Best Dental Clinic in Eastern Housing Pallabi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    .page-header {
+      background: linear-gradient(rgba(10, 48, 48, 0.7), rgba(44, 62, 80, 0.7)), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2070');
+    }
+
+    .value-card {
+      padding: 3rem;
+      text-align: center;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: var(--transition);
+      border: 1px solid var(--bg-soft);
+    }
+
+    .value-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      border-color: var(--primary-light);
+    }
+
+    .value-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--accent);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 2rem;
+      margin: 0 auto 2rem;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: var(--primary-light);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: var(--white);
+      border: 4px solid var(--primary);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .left { left: 0; }
+    .right { left: 50%; }
+
+    .right::after { left: -10px; }
+
+    .timeline-content {
+      padding: 2rem;
+      background: var(--white);
+      position: relative;
+      border-radius: var(--radius-md);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .timeline-content h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .team-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: var(--transition);
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-img-wrapper {
+      position: relative;
+      height: 350px;
+      overflow: hidden;
+    }
+
+    .team-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .team-card:hover .team-img-wrapper img {
+      transform: scale(1.05);
+    }
+
+    .team-info {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .team-social {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .team-social a {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: var(--bg-soft);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .team-social a:hover {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    @media (max-width: 768px) {
+      .timeline::after { left: 31px; }
+      .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+      .timeline-item::after { left: 21px; }
+      .right { left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="loader-tooth" style="border: 2px solid var(--primary); border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px var(--primary);">
+      <i class="fa-solid fa-tooth" style="color: var(--primary); font-size: 2.5rem;"></i>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Afsan Dental Care Logo" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-name">Afsan Dental Care</span>
+          <span class="logo-tagline" data-i18n="tagline">Skyline Dental Care</span>
+        </div>
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+        <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+        <li><a href="index.html#gallery" data-i18n="nav_gallery">Smile Gallery</a></li>
+        <li><a href="index.html#booking" class="nav-cta" data-i18n="nav_book">Book Appointment</a></li>
+      </ul>
+
+      <div class="lang-switcher">
+        <span class="lang-btn active" id="lang-en">EN</span>
+        <span class="lang-sep">|</span>
+        <span class="lang-btn" id="lang-bn">বাংলা</span>
+      </div>
+      
+      <div class="mobile-toggle" id="mobileToggle">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <span class="hero-badge" data-aos="fade-down" style="background: rgba(255,255,255,0.2); color: white; border-color: rgba(255,255,255,0.4);">
+        <i class="fa-solid fa-heart"></i> Patient-Centric Care
+      </span>
+      <h1 data-aos="fade-up" style="font-size: 3.5rem;">The Story Behind Your <br><span class="text-gradient" style="background: linear-gradient(135deg, #fff, #ff5fa2); -webkit-text-fill-color: transparent;">Perfect Smile</span></h1>
+      <p data-aos="fade-up" data-aos-delay="100" style="font-size: 1.2rem; max-width: 700px; margin: 1.5rem auto 0; opacity: 0.9;">Redefining the dental experience in Pallabi through technology, luxury, and personalized care by Dr. Afsana Jui.</p>
+    </div>
+  </section>
+
+  <!-- Our Vision & Mission -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=2070" alt="Clinic Interior" loading="lazy">
+          <div class="exp-badge" style="bottom: 2rem; right: 2rem; padding: 1.5rem;">
+            <strong>15+</strong>
+            <span>Years of Trust</span>
+          </div>
+        </div>
+        <div class="about-content" data-aos="fade-left">
+          <span class="text-gradient" style="font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Our Purpose</span>
+          <h2 style="font-size: 2.5rem; margin-top: 1rem;">Setting New Standards in <span class="text-gradient">Modern Dentistry</span></h2>
+          <p>Since our establishment, Afsan Dental Care has been at the forefront of dental innovation. Led by Dr. Afsana Jui, we provide expert care in a sanctuary where technology and comfort coexist.</p>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+            <div>
+              <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-eye" style="margin-right: 0.5rem;"></i> Our Vision</h3>
+              <p style="font-size: 0.95rem;">To be the most trusted name in premium dental care, known for transforming lives one smile at a time.</p>
+            </div>
+            <div>
+              <h3 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-bullseye" style="margin-right: 0.5rem;"></i> Our Mission</h3>
+              <p style="font-size: 0.95rem;">To provide world-class, pain-free dental treatments using international standards and personalized care plans.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="section-padding" style="background: var(--bg-soft);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="text-gradient" style="font-weight: 700; text-transform: uppercase;">Our Foundation</span>
+        <h2>Core Values That <span class="text-gradient">Drive Us</span></h2>
+      </div>
+      
+      <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="value-card" data-aos="fade-up">
+          <div class="value-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h3>Empathy First</h3>
+          <p>We treat every patient like family, ensuring your comfort and mental well-being are prioritized throughout your journey.</p>
+        </div>
+        <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="value-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3>Innovation</h3>
+          <p>We continuously invest in the latest global dental technologies to ensure more precise, faster, and pain-free results.</p>
+        </div>
+        <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="value-icon"><i class="fa-solid fa-shield-check"></i></div>
+          <h3>Integrity</h3>
+          <p>Transparency in treatment plans and pricing is our promise. We only recommend what's best for your long-term health.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Meet the Team -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="text-gradient" style="font-weight: 700; text-transform: uppercase;">The Experts</span>
+        <h2>Meet Our <span class="text-gradient">Specialist Team</span></h2>
+        <p>A team of highly qualified specialists dedicated to your oral health and aesthetic goals.</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Dr. Shakera Sultana -->
+        <div class="team-card" data-aos="fade-up">
+          <div class="team-img-wrapper">
+            <img src="doctor.png" alt="Dr. Afsana Jui" loading="lazy">
+          </div>
+          <div class="team-info">
+            <span class="text-gradient" style="font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Lead Specialist</span>
+            <h3>Dr. Afsana Jui</h3>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">B.D.S (DU), PGT (Oral and Maxillofacial Surgery)</p>
+            <div class="team-social">
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dr. Sarah Islam -->
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=1887" alt="Dr. Sarah Islam" loading="lazy">
+          </div>
+          <div class="team-info">
+            <span class="text-gradient" style="font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Cosmetic Specialist</span>
+            <h3>Dr. Sarah Islam</h3>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">BDS, PGT (Cosmetic Dentistry)</p>
+            <div class="team-social">
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dr. Ahmed Khan -->
+        <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=2070" alt="Dr. Ahmed Khan" loading="lazy">
+          </div>
+          <div class="team-info">
+            <span class="text-gradient" style="font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Implantologist</span>
+            <h3>Dr. Ahmed Khan</h3>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem;">BDS, MDS (Oral Surgery)</p>
+            <div class="team-social">
+              <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Journey (Timeline) -->
+  <section class="section-padding" style="background: var(--bg-soft);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="text-gradient" style="font-weight: 700; text-transform: uppercase;">Our Journey</span>
+        <h2>A Decade of <span class="text-gradient">Growth</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item left" data-aos="fade-right">
+          <div class="timeline-content">
+            <h3>Pallabi Center Launch</h3>
+            <p>Afsan Dental Care opened its doors in Eastern Housing Pallabi, bringing world-class dental care to the community.</p>
+          </div>
+        </div>
+        <div class="timeline-item right" data-aos="fade-left">
+          <div class="timeline-content">
+            <h3>Advanced Orthodontics</h3>
+            <p>Introduced modern orthodontic treatments and clear aligners for all age groups.</p>
+          </div>
+        </div>
+        <div class="timeline-item left" data-aos="fade-right">
+          <div class="timeline-content">
+            <h3>Painless Dentistry</h3>
+            <p>Milestone: Successfully implemented pain-free treatment protocols with 100% patient comfort.</p>
+          </div>
+        </div>
+        <div class="timeline-item right" data-aos="fade-left">
+          <div class="timeline-content">
+            <h3>2026</h3>
+            <p>Redefining luxury and efficacy with AI-integrated dental diagnosis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+    <section class="section-padding" style="background: var(--primary); color: white; text-align: center;">
+    <div class="container">
+      <h2 style="font-size: 3rem; margin-bottom: 2rem;">Ready for a <br>Beautiful Smile?</h2>
+      <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 3rem; opacity: 0.9;">Visit our Pallabi clinic today and discover why Afsan Dental Care is the trusted name in premium dentistry.</p>
+      <a href="index.html#booking" class="btn btn-outline" style="border-color: white; color: white;">Book Appointment Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom: 2rem;">
+            <div class="logo-badge">
+              <i class="fa-solid fa-tooth"></i>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name" style="color: white;">Afsan Dental Care</span>
+              <span class="logo-tagline" style="color: var(--secondary)">Skyline Dental Care</span>
+            </div>
+          </a>
+          <p>Redefining dental care through excellence, luxury, and compassion. Your smile is our priority.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="index.html#booking">Book Appointment</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col" style="grid-column: span 2;">
+          <h4>Contact Info</h4>
+          <ul class="footer-contact">
+            <li><i class="fa-solid fa-location-dot"></i> Road-NS1, Block-K, Eastern Housing Pallabi, Dhaka</li>
+            <li><i class="fa-solid fa-envelope"></i> aj6072@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        &copy; 2026 Afsan Dental Care. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <div class="floats">
+    <a href="#" class="scroll-top" id="scrollTop">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <a href="https://wa.me/8801XXX-XXXXXX" class="float-btn float-whatsapp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="https://facebook.com/afsandentalcare" target="_blank" class="float-btn float-facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a href="https://instagram.com/skylinedentalcare" target="_blank" class="float-btn float-instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>
